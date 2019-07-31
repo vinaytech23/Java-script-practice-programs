@@ -14,6 +14,14 @@ console.log(News_str3);
 console.log(News_str3.split("."));
 
 console.log(News_arr1.join(", "));
+
 let News_str4 = News_arr1.toString();
 console.log(News_str4);
-News_str4.replace(","," "));
+let News_arr3 = News_str4.split(",");
+console.log(News_arr3);
+let News_str5 =  News_arr3.join(" ");
+console.log(News_str5);
+
+let News_str6 = (News_str4.split(",")).join(" ");
+console.log(News_str6);
+//News_str4.replace(","," ");
