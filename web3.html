@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+	table{
+		border: 10px black solid;
+		/*border-collapse: collapse;*/
+
+	}	
+	td, th
+	{
+		border: 10px black solid;
+		margin: 10px;
+		padding: 10px;
+		text-align: center;
+		border-top-left-radius: 20px;
+		border-bottom-right-radius: 35px;
+	}
+	</style>
+	<script type="text/javascript">
+		function setColor(color) {
+  document.querySelector('.square').style.backgroundColor = '#' + color;
+  document.querySelector('.color').value = color;
+}
+
+function getRandomColor() {
+  var color = Math.floor(Math.random() * 16777215);
+  return color.toString(16);
+}
+
+function getInputColor() {
+  var value = document.querySelector('.color').value;
+  var color = Number('0x' + color);
+  if (color === +color) {
+    return color.toString(16);
+  }
+  return value;
+}
+
+document.addEventListener('click', function () {
+  setColor(getRandomColor());
+});
+
+document.addEventListener('keyup', function () {
+  setColor(getInputColor());
+});
+		// document.body.style.backgroundColor = "blue";
+		
+			// var color1 ='rgb('+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+')';
+			// console.log(color1);
+			// getElementsByTagName("td").get_random_color();
+
+		
+		// function get_random_color() 
+		// {
+		//     var color = "";
+		//     for(var i = 0; i < 3; i++) {
+		//         var sub = Math.floor(Math.random() * 256).toString(16);
+		//         color += (sub.length == 1 ? "0" + sub : sub);
+		//     }
+		//     return "#" + color;
+		// }
+	</script>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Image</th>
+				<th>Type</th>
+				<th>Evolves to</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Bulbasaur</td>
+				<td><img src="http://img4.wikia.nocookie.net/__cb20140328190757/pokemon/images/thumb/2/21/001Bulbasaur.png/200px-001Bulbasaur.png" alt=""></td>
+				<td>Grass/Poison</td>
+				<td><a href="http://pokemon.wikia.com/wiki/Ivysaur " target="_blank">Ivysaur</a>
+	</td>
+			</tr>
+			<tr>
+				<td>Charmander
+</td>
+<td><img src="http://img4.wikia.nocookie.net/__cb20140724195345/pokemon/images/thumb/7/73/004Charmander.png/200px-004Charmander.png">
+</td>
+<td>Fire
+</td>
+<td><a href="http://pokemon.wikia.com/wiki/Charmeleon " target="_blank">Charmeleon
+	</a></td>
+			</tr>
+			<tr>
+				<td>Squirtle
+</td>
+<td><img src="http://img1.wikia.nocookie.net/__cb20140328191525/pokemon/images/thumb/3/39/007Squirtle.png/200px-007Squirtle.png" alt=""></td>
+<td>Water
+</td>
+<td><a href="http://pokemon.wikia.com/wiki/Wartortle
+" target="_blank">Wartortle</a>
+	</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

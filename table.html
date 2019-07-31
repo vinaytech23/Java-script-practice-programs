@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>table</title>
+
+<style type="text/css" media="screen">
+	
+	table, td,tr, th {
+		border: 2px black solid;
+		border-collapse: collapse; 
+	}	
+	td{
+		width: 100px;
+		height: 100px;
+	}
+
+</style>
+	<link rel="stylesheet" href="">
+</head>
+<body id="bBody">
+	<table id="tTable">
+		<caption>Colors of life</caption>
+		<thead>
+			<tr class="headerRow">
+				<th>S.no.</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Contact details </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class= "firstRow">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class = "secondRow">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class = "thirdRow">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody> return '#' + Math.floor(Math.random() * 16777215).toString(16);
+	</table>
+
+	<script type="text/javascript">
+		document.getElementById('tTable').
+		document.getElementsByClassName('headerRow').addEventListener('click',changeColor);
+		function changeColor () {
+				 document.getElementById('tTable').style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);	
+		 } 
+
+
+
+	</script>
+</body>
+</html>
