@@ -1,0 +1,24 @@
+<p>file-size-one works!</p>
+<div class="container">
+
+    <form [formGroup]="fGroup" novalidate (ngSubmit)="onSubmit()">
+        <input type="file" #file1data="ngModel" formControlName="file1" [(ngModel)]="file1" (change)="readFile($event)">
+        <div *ngIf="file1data.touched">
+            <div *ngIf="file_status; else status1 ">
+                Your file size is {{ file.size }}
+
+            </div>
+            <ng-template #status1>
+                Please upload the file which is only equal to or below 1 MB
+
+            </ng-template>
+        </div>
+
+
+
+
+
+        <!-- <button type="submit" [disabled]="fGroup.invalid || fGroup.prestine">Submit</button> -->
+    </form>
+
+</div>
